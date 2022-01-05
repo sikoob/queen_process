@@ -4,39 +4,39 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
-
+.background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-image: url(./assets/858ef327bc40f6e523b9ff063ea8bb41.gif);
     background-size: auto;
     background-repeat: repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
 }
 
 .background_cover{
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
 
     background-color: black;
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .content_container {
     display: flex;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position: relative;
+    padding-top: 7rem;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     z-index: 1;
 }
@@ -79,8 +79,6 @@ h2 {
     text-align: center;
 }
 
-
-
 span {
     font-weight: bold;
     text-align: center;
@@ -110,10 +108,11 @@ span {
     }                  
 }
 
-@media (max-width: 62em) {
-    body {
+@media (max-width: 64em) {
+    .background {
         background-size: cover;
         background-repeat: no-repeat;
+        background-position: center center;
         overflow: hidden;
     }
 
@@ -161,10 +160,12 @@ span {
 @media (max-width: 36em) {
     h1 {
         font-size: 3.5rem;
+        margin-bottom: 1rem;
     }
 
     h2 {
         font-size: 2.7rem;
+        margin-top: 1rem;
     }
 
     .big-text {
@@ -178,7 +179,37 @@ span {
 }
 
 @media (max-width:25em) {
-    *{
-    font-size: 50%;
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .big-text {
+        font-size: 2.4rem;
+    }
+
+    span {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:20em) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .big-text {
+        font-size: 2rem;
+    }
+
+    span {
+        font-size: 1.2rem;
     }
 }
